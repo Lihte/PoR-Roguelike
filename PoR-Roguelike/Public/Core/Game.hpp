@@ -32,7 +32,6 @@ public:
 
 	sf::RenderWindow mWindow;
 
-
 	bool IsRunning(void) const;
 
 	int Run(void);

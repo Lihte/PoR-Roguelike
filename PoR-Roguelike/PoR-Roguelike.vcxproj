@@ -20,10 +20,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Private\Core\Game.cpp" />
+    <ClCompile Include="Private\Core\States\GameState.cpp" />
+    <ClCompile Include="Private\Core\States\MainMenuState.cpp" />
     <ClCompile Include="Private\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Private\Core\States\AState.cpp" />
+    <ClInclude Include="Private\Core\States\SplashState.cpp" />
+    <ClInclude Include="Public\Core\Core_types.hpp" />
     <ClInclude Include="Public\Core\Game.hpp" />
+    <ClInclude Include="Public\Core\Handlers\StateHandler.hpp" />
+    <ClInclude Include="Public\Core\States\AState.hpp" />
+    <ClInclude Include="Public\Core\States\GameState.hpp" />
+    <ClInclude Include="Public\Core\States\MainMenuState.hpp" />
+    <ClInclude Include="Public\Core\States\SplashState.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6C25EDB2-AB7B-449A-8CA5-7A07DA53068A}</ProjectGuid>
