@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Custom
+.vs/
+*.opensdf
+x64/
+PoR-Roguelike/x64/
