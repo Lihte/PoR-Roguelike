@@ -36,3 +36,4 @@
 *.opensdf
 x64/
 PoR-Roguelike/x64/
+*.sdf
