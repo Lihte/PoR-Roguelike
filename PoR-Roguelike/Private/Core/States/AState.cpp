@@ -64,11 +64,6 @@ bool AState::IsInitComplete()
 	return _mInit;
 }
 
-bool AState::IsPaused()
-{
-	return _mPaused;
-}
-
 void AState::Pause(void)
 {
 	if (_mPaused == false)
@@ -87,17 +82,12 @@ void AState::Resume(void)
 	}
 }
 
-void AState::Cleanup(void)
+bool AState::IsPaused()
 {
-	if (_mCleanup == true)
-	{
-		HandleCleanup();
-
-		_mCleanup = false;
-	}
+	return _mPaused;
 }
 
-float AState::GetElapsedTime(void) const 
+float AState::GetElapsedTime(void) const
 {
 	float result = _mElapsedClock.getElapsedTime().asSeconds;
 
@@ -107,4 +97,14 @@ float AState::GetElapsedTime(void) const
 	}
 
 	return result;
+}
+
+void AState::Cleanup(void)
+{
+	if (_mCleanup == true)
+	{
+		HandleCleanup();
+
+		_mCleanup = false;
+	}
 }

@@ -27,6 +27,9 @@
     <ClCompile Include="Private\Core\States\GameState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Private\Core\Handlers\StateHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\Core\Game.hpp">

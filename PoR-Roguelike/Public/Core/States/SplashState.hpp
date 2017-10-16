@@ -9,7 +9,7 @@ class SplashState : AState
 	/// The filename of the splash image to load
 	//std::string _mSplashFilename;
 	/// Splash ImageAsset to load
-	//ImageAsse _mSplashImage;
+	//ImageAsset _mSplashImage;
 	/// The sprite to hold the splash image being displayed
 	//sf::Sprite _mSplashSprite;
 	/// The time in seconds to wait before continuing to next game state
