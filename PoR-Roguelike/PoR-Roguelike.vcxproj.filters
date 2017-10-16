@@ -15,48 +15,48 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\Main.cpp">
+    <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\Core\Game.cpp">
+    <ClCompile Include="src\Core\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\Core\States\MainMenuState.cpp">
+    <ClCompile Include="src\Core\States\AState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\Core\States\GameState.cpp">
+    <ClCompile Include="src\Core\States\GameState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Private\Core\Handlers\StateHandler.cpp">
+    <ClCompile Include="src\Core\States\MainMenuState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\States\SplashState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Handlers\StateHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Private\Core\States\AState.cpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Private\Core\States\SplashState.cpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\Core\Game.h">
+    <ClInclude Include="src\Core\Core_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\Core\Core_types.h">
+    <ClInclude Include="src\Core\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\Core\States\SplashState.h">
+    <ClInclude Include="src\Core\States\AState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\Core\States\MainMenuState.h">
+    <ClInclude Include="src\Core\States\GameState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\Core\States\GameState.h">
+    <ClInclude Include="src\Core\States\MainMenuState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\Core\States\AState.h">
+    <ClInclude Include="src\Core\States\SplashState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\Core\Handlers\StateHandler.h">
+    <ClInclude Include="src\Core\Handlers\StateHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

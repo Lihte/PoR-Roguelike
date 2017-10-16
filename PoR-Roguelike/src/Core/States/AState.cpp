@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Core/States/AState.h>
+#include "AState.h"
 
 AState::AState(const typeStateID stateId) :
 	_mStateID(stateId),
@@ -78,7 +78,7 @@ void AState::Resume(void)
 	if (_mPaused == true)
 	{
 		_mPaused = false;
-		_mPausedTime += _mPausedClock.getElapsedTime().asSeconds;
+		_mPausedTime += _mPausedClock.getElapsedTime().asSeconds();
 	}
 }
 
@@ -89,7 +89,7 @@ bool AState::IsPaused()
 
 float AState::GetElapsedTime(void) const
 {
-	float result = _mElapsedClock.getElapsedTime().asSeconds;
+	float result = _mElapsedClock.getElapsedTime().asSeconds();
 
 	if (_mInit == false)
 	{

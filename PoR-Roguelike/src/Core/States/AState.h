@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Core/Core_types.hpp>
+#include "Core\Core_types.h"
 
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>

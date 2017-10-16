@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Core/States/AState.hpp>
+#include "AState.h"
 
 class SplashState : AState
 {
@@ -21,7 +21,7 @@ protected:
 
 public:
 
-	SplashState(const typeAssetID splashID, float splashDelay = 10.0f);
+	SplashState(const typeAssetID splashID, float splashDelay);
 
 	~SplashState();
 

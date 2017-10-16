@@ -1,6 +1,8 @@
+#pragma once
+
 #include <vector>
-#include <Core/States/AState.h>
-#include <Core/Core_types.h>
+#include "Core\States\AState.h"
+#include "Core\Core_types.h"
 
 class StateHandler {
 	
@@ -11,7 +13,7 @@ protected:
 
 public:
 
-	StateHandler();
+	StateHandler(const typeAssetID splashID, float splashDelay = 10.0f);
 
 	virtual ~StateHandler();
 
