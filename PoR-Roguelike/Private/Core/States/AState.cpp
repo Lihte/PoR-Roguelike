@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Core/States/AState.hpp>
+#include <Core/States/AState.h>
 
 AState::AState(const typeStateID stateId) :
 	_mStateID(stateId),

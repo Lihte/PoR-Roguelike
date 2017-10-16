@@ -1,4 +1,4 @@
-#include <Core/Game.hpp>
+#include <Core/Game.h>
 
 Game::Game() : Game("PoR-Roguelike")
 {
