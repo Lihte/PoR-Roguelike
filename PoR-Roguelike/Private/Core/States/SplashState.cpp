@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Core\States\SplashState.hpp>
+#include <Core\States\SplashState.h>
 
 SplashState::SplashState(const typeAssetID splashID, float splashDelay = 10.0f) :
 	AState("Splash"),

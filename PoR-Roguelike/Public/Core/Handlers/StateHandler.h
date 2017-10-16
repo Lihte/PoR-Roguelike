@@ -1,6 +1,6 @@
 #include <vector>
-#include <Core/States/AState.hpp>
-#include <Core/Core_types.hpp>
+#include <Core/States/AState.h>
+#include <Core/Core_types.h>
 
 class StateHandler {
 	

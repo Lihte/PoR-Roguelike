@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -27,13 +27,13 @@
   <ItemGroup>
     <ClInclude Include="Private\Core\States\AState.cpp" />
     <ClInclude Include="Private\Core\States\SplashState.cpp" />
-    <ClInclude Include="Public\Core\Core_types.hpp" />
-    <ClInclude Include="Public\Core\Game.hpp" />
-    <ClInclude Include="Public\Core\Handlers\StateHandler.hpp" />
-    <ClInclude Include="Public\Core\States\AState.hpp" />
-    <ClInclude Include="Public\Core\States\GameState.hpp" />
-    <ClInclude Include="Public\Core\States\MainMenuState.hpp" />
-    <ClInclude Include="Public\Core\States\SplashState.hpp" />
+    <ClInclude Include="Public\Core\Core_types.h" />
+    <ClInclude Include="Public\Core\Game.h" />
+    <ClInclude Include="Public\Core\Handlers\StateHandler.h" />
+    <ClInclude Include="Public\Core\States\AState.h" />
+    <ClInclude Include="Public\Core\States\GameState.h" />
+    <ClInclude Include="Public\Core\States\MainMenuState.h" />
+    <ClInclude Include="Public\Core\States\SplashState.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6C25EDB2-AB7B-449A-8CA5-7A07DA53068A}</ProjectGuid>
@@ -44,26 +44,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -86,8 +86,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\Programming\External\SFML-2.4.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Programming\External\SFML-2.4.2\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)External\SFML-2.4.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)External\SFML-2.4.2\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>D:\Programming\External\SFML-2.4.2\include;$(IncludePath)</IncludePath>
@@ -109,7 +109,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Programming\Projects\PoR-Roguelike\PoR-Roguelike\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
