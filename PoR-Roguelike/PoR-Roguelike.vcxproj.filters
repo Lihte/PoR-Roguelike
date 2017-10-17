@@ -45,6 +45,9 @@
     <ClCompile Include="src\Core\Entities\Entity.cpp">
       <Filter>Source Files\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="src\Core\Entities\Player.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Core_types.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Entities\Entity.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Entities\Player.h">
       <Filter>Header Files\Entities</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,5 +1,7 @@
 #include "Game.h"
 
+#include "Entities/Player.h"
+
 Game::Game() : Game("PoR-Roguelike")
 {
 
