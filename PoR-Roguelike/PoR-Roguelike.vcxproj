@@ -131,6 +131,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\Entities\Entity.cpp" />
+    <ClCompile Include="src\Core\Entities\Player.cpp" />
     <ClCompile Include="src\Core\Game.cpp" />
     <ClCompile Include="src\Core\Handlers\StateHandler.cpp" />
     <ClCompile Include="src\Core\States\AState.cpp" />
@@ -141,6 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Core_types.h" />
+    <ClInclude Include="src\Core\Entities\Entity.h" />
+    <ClInclude Include="src\Core\Entities\Player.h" />
     <ClInclude Include="src\Core\Game.h" />
     <ClInclude Include="src\Core\Handlers\StateHandler.h" />
     <ClInclude Include="src\Core\States\AState.h" />
