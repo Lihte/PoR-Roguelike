@@ -30,6 +30,11 @@
     </Filter>
     <Filter Include="Source Files\Core\Screens">
       <UniqueIdentifier>{58de1fb6-f005-4399-9899-f2ce04ddc590}</UniqueIdentifier>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{2e725514-a3b6-4572-ae31-15de8990bb7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{79ad3b32-ebae-4bbb-87bd-5a6bad54288b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +59,12 @@
     <ClCompile Include="src\Core\Screens\GameScreen.cpp">
       <Filter>Source Files\Core\Screens</Filter>
     </ClCompile>
+    <ClCompile Include="src\Core\Entities\Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Entities\Player.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Screens\AScreen.h">
@@ -73,6 +84,12 @@
     </ClInclude>
     <ClInclude Include="src\Core\Core_types.h">
       <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Entities\Entity.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Entities\Player.h">
+      <Filter>Header Files\Entities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
