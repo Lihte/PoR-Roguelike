@@ -2,37 +2,18 @@
 
 #include "Core\Core_types.h"
 
+#include <SFML\Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-class AState {
-
-private:	
-	// VARIABLES //
-
-	const typeStateID _mStateID;
-
-	float _mElapsedTime;
-	float _mPausedTime;
-
-	sf::Clock _mElapsedClock;
-	sf::Clock _mPausedClock;
-
-	bool _mInit;
-	bool _mPaused;
-	bool _mCleanup;
-
-	// METHODS //
-protected:
-
-	virtual void HandleCleanup(void) = 0;
+class AScreen {
 
 public:
 
-	AState(const typeStateID stateId);
-	virtual ~AState();
+	AScreen(Game& game, const ScreenType screenId);
+	virtual ~AScreen();
 
-	const typeStateID GetStateID(void) const;
+	const ScreenType GetScreenID(void) const;
 
 	virtual void Init(void);
 	virtual void ReInit(void) = 0;
@@ -53,4 +34,26 @@ public:
 	float GetElapsedTime(void) const;
 
 	void Cleanup(void);
+
+protected:
+
+	virtual void HandleCleanup(void) = 0;
+
+	Game& m_Game;
+
+private:
+
+	// VARIABLES //
+
+	const ScreenType m_ScreenID;
+
+	float m_ElapsedTime;
+	float m_PausedTime;
+
+	sf::Clock m_ElapsedClock;
+	sf::Clock m_PausedClock;
+
+	bool m_Init;
+	bool m_Paused;
+	bool m_Cleanup;
 };

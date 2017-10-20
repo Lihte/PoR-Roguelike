@@ -1,33 +1,36 @@
 #include "Game.h"
+#include "Screens\GameScreen.h"
+#include "Screens\AScreen.h"
 
-Game::Game() : Game("PoR-Roguelike")
+
+Game* Game::gGame = NULL;
+
+Game::Game(const std::string title) : 
+	m_Title(title),
+	m_Window(),
+	m_WindowStyle(sf::Style::Close | sf::Style::Resize),
+	m_ContextSettings(),
+	m_ExitCode(0),
+	m_IsRunning(false),
+	m_ScreenManager()
 {
-
-}
-
-Game::Game(const std::string title) : mTitle(title),
-	mWindow(),
-	mWindowStyle(sf::Style::Close | sf::Style::Resize),
-	mContextSettings(),
-	_mExitCode(0),
-	_mIsRunning(false)
-{
-	//gGame = this;
+	gGame = this;
 }
 
 int Game::Run(void)
 {
-	_mIsRunning = true;
+	m_IsRunning = true;
 
 	InitRenderer();
+	InitScreenFactory();
 
 	GameLoop();
 
 	Cleanup();
 
-	_mIsRunning = false;
+	m_IsRunning = false;
 
-	return _mExitCode;
+	return m_ExitCode;
 }
 
 void Game::GameLoop(void)
@@ -41,31 +44,38 @@ void Game::GameLoop(void)
 //
 //	sf::Int32 updateNext = updateClock.getElapsedTime().asMilliseconds();
 
-	while (IsRunning() && mWindow.isOpen())
+	while (IsRunning() && m_Window.isOpen())
 	{
 		ProcessInput();
 
 		sf::Event event;
-		while (mWindow.pollEvent(event))
+		while (m_Window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
-				mWindow.close();
+				m_Window.close();
 		}
 
-		mWindow.clear();
+		AScreen& screen = m_ScreenManager.GetActiveScreen();
 
-		mWindow.display();
+		m_Window.clear();
+		screen.Draw();
+		m_Window.display();
 	}
 }
 
 bool Game::IsRunning(void) const 
 {
-	return _mIsRunning;
+	return m_IsRunning;
+}
+
+void Game::InitScreenFactory(void)
+{
+	m_ScreenManager.AddActiveScreen(new(std::nothrow) GameScreen(*this));
 }
 
 void Game::InitRenderer(void)
 {
-	mWindow.create(sf::VideoMode(800, 600), mTitle, mWindowStyle, mContextSettings);
+	m_Window.create(sf::VideoMode(800, 600), m_Title, m_WindowStyle, m_ContextSettings);
 
 }
 

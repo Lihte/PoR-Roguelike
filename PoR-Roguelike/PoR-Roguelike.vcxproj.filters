@@ -13,6 +13,23 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{78b1155e-0750-4d43-a68b-837228dbbea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Handlers">
+      <UniqueIdentifier>{68599a37-0de0-422f-8bb7-c91dc4a225ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{7808facd-3a01-46d1-932d-8aed1b503578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Handlers">
+      <UniqueIdentifier>{e101f56c-0800-436e-8ff7-d8ac27c829fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Screens">
+      <UniqueIdentifier>{a1c5b4ef-e0ff-49c1-ae5c-44877651d39d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Screens">
+      <UniqueIdentifier>{58de1fb6-f005-4399-9899-f2ce04ddc590}</UniqueIdentifier>
     <Filter Include="Header Files\Entities">
       <UniqueIdentifier>{2e725514-a3b6-4572-ae31-15de8990bb7b}</UniqueIdentifier>
     </Filter>
@@ -25,22 +42,22 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\States\AState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Core\Screens\AScreen.cpp">
+      <Filter>Source Files\Core\Screens</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\States\GameState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Core\Screens\SplashScreen.cpp">
+      <Filter>Source Files\Core\Screens</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\States\MainMenuState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Core\Handlers\ScreenManager.cpp">
+      <Filter>Source Files\Core\Handlers</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\States\SplashState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Core\Core_types.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Handlers\StateHandler.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Core\Screens\GameScreen.cpp">
+      <Filter>Source Files\Core\Screens</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Entities\Entity.cpp">
       <Filter>Source Files\Entities</Filter>
@@ -50,26 +67,23 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\Core_types.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Core\Screens\AScreen.h">
+      <Filter>Header Files\Core\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Screens\SplashScreen.h">
+      <Filter>Header Files\Core\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Handlers\ScreenManager.h">
+      <Filter>Header Files\Core\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Screens\GameScreen.h">
+      <Filter>Header Files\Core\Screens</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Game.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\States\AState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\States\GameState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\States\MainMenuState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\States\SplashState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\Handlers\StateHandler.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Core\Core_types.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Entities\Entity.h">
       <Filter>Header Files\Entities</Filter>

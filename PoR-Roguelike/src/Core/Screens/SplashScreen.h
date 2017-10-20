@@ -1,8 +1,8 @@
 #pragma once
 
-#include "AState.h"
+#include "AScreen.h"
 
-class SplashState : AState
+class SplashScreen : AScreen
 {
 	///The Asset ID to assign to the splash image
 	typeAssetID	_mSplashID;
@@ -12,7 +12,7 @@ class SplashState : AState
 	//ImageAsset _mSplashImage;
 	/// The sprite to hold the splash image being displayed
 	//sf::Sprite _mSplashSprite;
-	/// The time in seconds to wait before continuing to next game state
+	/// The time in seconds to wait before continuing to next game Screen
 	float _mSplashDelay;
 
 protected:
@@ -21,9 +21,9 @@ protected:
 
 public:
 
-	SplashState(const typeAssetID splashID, float splashDelay);
+	SplashScreen(const typeAssetID splashID, Game& game, float splashDelay);
 
-	~SplashState();
+	~SplashScreen();
 
 	virtual void Init(void);
 

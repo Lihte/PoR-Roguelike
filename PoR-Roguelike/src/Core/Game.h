@@ -1,18 +1,29 @@
 #include <SFML/Graphics.hpp>
+#include "Handlers\ScreenManager.h"
 
 class Game {
 
-	bool _mIsRunning;
-
-	int _mExitCode;
-
-	//static Game* gGame;
-
-	void InitRenderer(void);
-
-protected:
+public:
 
 	Game(const std::string title);
+
+	bool IsRunning(void) const;
+
+	int Run(void);
+
+	void Quit(int theExitCode);
+
+	std::string m_Title;
+
+	unsigned long m_WindowStyle;
+
+	sf::ContextSettings m_ContextSettings;
+
+	sf::RenderWindow m_Window;
+
+	ScreenManager m_ScreenManager;
+
+protected:
 
 	void GameLoop(void);
 
@@ -20,19 +31,15 @@ protected:
 
 	void Cleanup(void);
 
-public:
+private:
 
-	Game();
+	void InitRenderer(void);
 
-	std::string mTitle;
+	void InitScreenFactory(void);
 
-	unsigned long mWindowStyle;
+	bool m_IsRunning;
 
-	sf::ContextSettings mContextSettings;
+	int m_ExitCode;
 
-	sf::RenderWindow mWindow;
-
-	bool IsRunning(void) const;
-
-	int Run(void);
+	static Game* gGame;
 };
