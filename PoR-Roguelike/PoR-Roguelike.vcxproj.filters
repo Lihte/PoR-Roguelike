@@ -30,6 +30,7 @@
     </Filter>
     <Filter Include="Source Files\Core\Screens">
       <UniqueIdentifier>{58de1fb6-f005-4399-9899-f2ce04ddc590}</UniqueIdentifier>
+	  </Filter>
     <Filter Include="Header Files\Entities">
       <UniqueIdentifier>{2e725514-a3b6-4572-ae31-15de8990bb7b}</UniqueIdentifier>
     </Filter>
