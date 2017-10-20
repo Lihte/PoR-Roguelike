@@ -4,7 +4,7 @@ int main()
 {
 	int exitCode = 0;
 
-	Game* game = new Game();
+	Game* game = new Game("");
 
 	exitCode = game->Run();
 
