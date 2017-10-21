@@ -30,12 +30,24 @@
     </Filter>
     <Filter Include="Source Files\Core\Screens">
       <UniqueIdentifier>{58de1fb6-f005-4399-9899-f2ce04ddc590}</UniqueIdentifier>
-	  </Filter>
-    <Filter Include="Header Files\Entities">
+    </Filter>
+    <Filter Include="Header Files\Core\Entities">
       <UniqueIdentifier>{2e725514-a3b6-4572-ae31-15de8990bb7b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Entities">
+    <Filter Include="Source Files\Core\Entities">
       <UniqueIdentifier>{79ad3b32-ebae-4bbb-87bd-5a6bad54288b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Tiles">
+      <UniqueIdentifier>{06794740-15ac-4345-8cc4-e21bb409eea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Tiles">
+      <UniqueIdentifier>{995d637a-f8ca-4aa1-8428-b52d2ef05eb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\DungeonGenerator">
+      <UniqueIdentifier>{f403d275-6ac6-41f3-a3f8-9532daaf83a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\DungeonGenerator">
+      <UniqueIdentifier>{a9bd7c12-7cc8-4b41-99bc-500e5cf916b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -61,10 +73,25 @@
       <Filter>Source Files\Core\Screens</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Entities\Entity.cpp">
-      <Filter>Source Files\Entities</Filter>
+      <Filter>Source Files\Core\Entities</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Entities\Player.cpp">
-      <Filter>Source Files\Entities</Filter>
+      <Filter>Source Files\Core\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\GameObject.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Tiles\Tile.cpp">
+      <Filter>Source Files\Core\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DungeonGenerator\DungeonGenerator.cpp">
+      <Filter>Source Files\Core\DungeonGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Tiles\FloorTile.cpp">
+      <Filter>Source Files\Core\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Tiles\WallTile.cpp">
+      <Filter>Source Files\Core\Tiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,10 +114,25 @@
       <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Entities\Entity.h">
-      <Filter>Header Files\Entities</Filter>
+      <Filter>Header Files\Core\Entities</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Entities\Player.h">
-      <Filter>Header Files\Entities</Filter>
+      <Filter>Header Files\Core\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\GameObject.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Tiles\Tile.h">
+      <Filter>Header Files\Core\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DungeonGenerator\DungeonGenerator.h">
+      <Filter>Header Files\Core\DungeonGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Tiles\FloorTile.h">
+      <Filter>Header Files\Core\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Tiles\WallTile.h">
+      <Filter>Header Files\Core\Tiles</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

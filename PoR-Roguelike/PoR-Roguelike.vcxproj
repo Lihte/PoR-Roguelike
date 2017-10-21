@@ -132,16 +132,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Core_types.cpp" />
+    <ClCompile Include="src\Core\DungeonGenerator\DungeonGenerator.cpp" />
     <ClCompile Include="src\Core\Entities\Entity.cpp" />
     <ClCompile Include="src\Core\Entities\Player.cpp" />
     <ClCompile Include="src\Core\Game.cpp" />
+    <ClCompile Include="src\Core\GameObject.cpp" />
     <ClCompile Include="src\Core\Handlers\ScreenManager.cpp" />
     <ClCompile Include="src\Core\Screens\AScreen.cpp" />
     <ClCompile Include="src\Core\Screens\GameScreen.cpp" />
     <ClCompile Include="src\Core\Screens\SplashScreen.cpp" />
+    <ClCompile Include="src\Core\Tiles\FloorTile.cpp" />
+    <ClCompile Include="src\Core\Tiles\Tile.cpp" />
+    <ClCompile Include="src\Core\Tiles\WallTile.cpp" />
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Core\DungeonGenerator\DungeonGenerator.h" />
+    <ClInclude Include="src\Core\GameObject.h" />
     <ClInclude Include="src\Core\Screens\GameScreen.h" />
     <ClInclude Include="src\Core\Core_types.h" />
     <ClInclude Include="src\Core\Entities\Entity.h" />
@@ -150,6 +157,9 @@
     <ClInclude Include="src\Core\Handlers\ScreenManager.h" />
     <ClInclude Include="src\Core\Screens\AScreen.h" />
     <ClInclude Include="src\Core\Screens\SplashScreen.h" />
+    <ClInclude Include="src\Core\Tiles\FloorTile.h" />
+    <ClInclude Include="src\Core\Tiles\Tile.h" />
+    <ClInclude Include="src\Core\Tiles\WallTile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

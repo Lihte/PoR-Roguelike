@@ -2,13 +2,26 @@
 #include <SFML/System/Vector2.hpp>
 #include <vector>
 
-class Tiles;
+class Tile;
 
 class DungeonGenerator {
 public:
-	DungeonGenerator();
+	typedef std::vector<Tile> Tiles;
+
+	struct Room {
+		Tiles tiles;
+		int height;
+		int width;
+	};
+
+	DungeonGenerator(const int roomCount);
 	~DungeonGenerator();
 
 private:
-	std::vector<Tiles> TileTypes;
+	void GenerateRooms();
+
+	int m_RoomCount;
+	int m_MaxRoomHeight;
+	int m_MaxRoomWidth;
+	Tiles m_Tiles;
 };
