@@ -6,14 +6,14 @@
 
 #include "Core/GameObject.h"
 
-class Tile : GameObject {
+class Tile : public GameObject {
 public:
 	enum TileType {
 		Floor,
 		Wall,
 	};
 
-	Tile(const TileType tileType, std::string textureName);
+	Tile(const sf::Vector2f pos, const TileType tileType, std::string textureName);
 	virtual ~Tile();
 
 	virtual void Update(const float dt);

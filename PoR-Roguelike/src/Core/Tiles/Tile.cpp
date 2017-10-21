@@ -1,8 +1,10 @@
 #include "Tile.h"
 
-Tile::Tile(const TileType tileType, const std::string textureName)
+Tile::Tile(const sf::Vector2f pos, const TileType tileType, const std::string textureName)
 	: GameObject(textureName) {
 	m_TileType = tileType;
+	m_Position = pos;
+	m_Sprite->setPosition(pos);
 }
 
 Tile::~Tile(){

@@ -6,10 +6,10 @@
 
 #include "Core/Tiles/Tile.h"
 
-class WallTile : Tile {
+class WallTile : public Tile {
 public:
 
-	WallTile(std::string textureName);
+	WallTile(const sf::Vector2f pos, std::string textureName);
 	virtual ~WallTile();
 
 	virtual void Update(const float dt);

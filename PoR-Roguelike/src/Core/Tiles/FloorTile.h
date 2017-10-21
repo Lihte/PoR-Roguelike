@@ -6,9 +6,9 @@
 
 #include "Core/Tiles/Tile.h"
 
-class FloorTile : Tile {
+class FloorTile : public Tile {
 public:
-	FloorTile(std::string textureName);
+	FloorTile(const sf::Vector2f pos, std::string textureName);
 	virtual ~FloorTile();
 
 	virtual void Update(const float dt);

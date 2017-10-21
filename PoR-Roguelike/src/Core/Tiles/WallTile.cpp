@@ -1,7 +1,7 @@
 #include "WallTile.h"
 
-WallTile::WallTile(const std::string textureName)
-	: Tile(TileType::Wall, textureName) {
+WallTile::WallTile(const sf::Vector2f pos, const std::string textureName)
+	: Tile(pos, TileType::Wall, textureName) {
 }
 
 WallTile::~WallTile(){
