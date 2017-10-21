@@ -1,7 +1,7 @@
 #include "Entity.h"
 
-Entity::Entity(const int health, const std::string textureName){
-	//m_Sprite->setTexture();
+Entity::Entity(const int health, const std::string textureName)
+	: GameObject(textureName) {
 	m_Health = health;
 }
 
@@ -9,12 +9,5 @@ Entity::~Entity(){
 	delete m_Sprite;
 }
 
-void Entity::Update(const float dt)
-{
-	UpdateSpritePosition();
-}
-
-void Entity::UpdateSpritePosition()
-{
-	m_Sprite->setPosition(m_Position);
+void Entity::Update(const float dt){
 }
