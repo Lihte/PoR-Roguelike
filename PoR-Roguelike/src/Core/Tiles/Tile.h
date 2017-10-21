@@ -13,7 +13,7 @@ public:
 		Wall,
 	};
 
-	Tile(const std::string textureName);
+	Tile(const TileType tileType, std::string textureName);
 	virtual ~Tile();
 
 	virtual void Update(const float dt);

@@ -1,8 +1,8 @@
 #include "Tile.h"
 
-Tile::Tile(const std::string textureName)
+Tile::Tile(const TileType tileType, const std::string textureName)
 	: GameObject(textureName) {
-	
+	m_TileType = tileType;
 }
 
 Tile::~Tile(){
