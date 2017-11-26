@@ -23,10 +23,10 @@ int Game::Run(void)
 {
 	m_IsRunning = true;
 
+	m_AssetManager.RegisterHandler(new TextureHandler("TextureHandler"));
+
 	InitRenderer();
 	InitScreenFactory();
-
-	m_AssetManager.RegisterHandler(new TextureHandler("TextureHandler"));
 
 	GameLoop();
 

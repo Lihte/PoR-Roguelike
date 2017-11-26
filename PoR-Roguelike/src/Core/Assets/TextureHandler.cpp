@@ -21,7 +21,7 @@ bool TextureHandler::LoadFromFile(const typeAssetID theAssetID, sf::Texture& tex
 
 	if (filename.length() > 0)
 	{
-		result = texture.loadFromFile(filename);
+		result = texture.loadFromFile("assets/" + filename);
 	}
 
 	return result;
@@ -83,7 +83,7 @@ bool TextureHandler::IsLoaded(const typeAssetID theAssetID) const
 
 const std::string TextureHandler::GetFilename(const typeAssetID theAssetID) const
 {
-	return std::string();
+	return theAssetID + ".png";
 }
 
 void TextureHandler::SetFilename(const typeAssetID theAssetID, std::string theFilename)
