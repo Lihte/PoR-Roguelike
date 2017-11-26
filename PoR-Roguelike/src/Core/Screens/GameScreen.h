@@ -1,5 +1,6 @@
 #pragma once
 #include "AScreen.h"
+#include "Core\Entities\Player.h"
 
 class GameScreen : public AScreen
 {
@@ -18,6 +19,7 @@ protected:
 	virtual void HandleCleanup(void);
 
 private:
-	sf::CircleShape shape;
+
+	Player* player;
 };
 

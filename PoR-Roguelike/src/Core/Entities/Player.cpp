@@ -3,7 +3,7 @@
 Player::Player() :
 	Entity(1, "")
 {
-
+	m_Sprite = new sf::Sprite();
 }
 
 Player::~Player()
