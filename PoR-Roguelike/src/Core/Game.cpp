@@ -40,26 +40,31 @@ int Game::Run(void)
 void Game::GameLoop(void)
 {
 
-//	sf::Clock updateClock;
-//
-//	sf::Clock frameClock;
-//
-//	updateClock.restart();
-//
-//	sf::Int32 updateNext = updateClock.getElapsedTime().asMilliseconds();
+	sf::Clock updateClock;
+
+	sf::Clock frameClock;
+
+	updateClock.restart();
+
+	sf::Int32 updateNext = updateClock.getElapsedTime().asMilliseconds();
 
 	while (IsRunning() && m_Window.isOpen())
 	{
-		ProcessInput();
+		AScreen& screen = m_ScreenManager.GetActiveScreen();
 
-		sf::Event event;
-		while (m_Window.pollEvent(event))
+		uint32_t updates = 0;
+
+		ProcessInput(screen);
+
+		sf::Int32 updateTime = updateClock.getElapsedTime().asMilliseconds();
+
+		while ((updateTime - updateNext) >= m_UpdateRate && updates++ < m_MaxUpdates)
 		{
-			if (event.type == sf::Event::Closed)
-				m_Window.close();
+			screen.UpdateFixed();
+			updateNext += m_UpdateRate;
 		}
 
-		AScreen& screen = m_ScreenManager.GetActiveScreen();
+		screen.UpdateVariable(frameClock.restart().asSeconds());
 
 		m_Window.clear();
 		screen.Draw();
@@ -83,9 +88,14 @@ void Game::InitRenderer(void)
 
 }
 
-void Game::ProcessInput() 
+void Game::ProcessInput(AScreen& screen) 
 {
-
+	sf::Event event;
+	while (m_Window.pollEvent(event))
+	{
+		if (event.type == sf::Event::Closed)
+			m_Window.close();
+	}
 }
 
 void Game::Cleanup(void) 

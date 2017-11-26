@@ -49,6 +49,12 @@
     <Filter Include="Source Files\Core\Assets">
       <UniqueIdentifier>{f2e6294d-511f-468a-897e-9b4cfde520c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Core\Factories">
+      <UniqueIdentifier>{bf3c7e47-21c7-4114-b146-05df77723003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Factories">
+      <UniqueIdentifier>{c7a8f0fe-ca71-4e0b-8178-8adaa220c12d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
@@ -84,13 +90,19 @@
     <ClCompile Include="src\Core\Assets\TextureHandler.cpp">
       <Filter>Source Files\Core\Assets</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Assets\TextureAsset.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Core\Managers\AssetManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Core\Managers</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Interfaces\IAsset.cpp">
+      <Filter>Source Files\Core\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Assets\TextureAsset.cpp">
+      <Filter>Source Files\Core\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Entities\PlayerMeleeAttack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Factories\EntityFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,22 +131,25 @@
     <ClInclude Include="src\Core\Managers\ScreenManager.h">
       <Filter>Header Files\Core\Managers</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Manager\ScreenManager.h">
-      <Filter>Header Files\Core\Managers</Filter>
-    </ClInclude>
     <ClInclude Include="src\Core\Interfaces\IAssetHandler.h">
       <Filter>Header Files\Core\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Assets\TextureHandler.h">
       <Filter>Header Files\Core\Assets</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Assets\TextureAsset.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Core\Managers\AssetManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Core\Managers</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Interfaces\IAsset.h">
+      <Filter>Header Files\Core\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Assets\TextureAsset.h">
+      <Filter>Header Files\Core\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Entities\PlayerMeleeAttack.h">
+      <Filter>Header Files\Core\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Factories\EntityFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -131,6 +131,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\Factories\EntityFactory.cpp" />
+    <ClCompile Include="src\Core\Entities\PlayerMeleeAttack.cpp" />
     <ClCompile Include="src\Core\Interfaces\IAsset.cpp" />
     <ClCompile Include="src\Core\Managers\AssetManager.cpp" />
     <ClCompile Include="src\Core\Interfaces\IAssetHandler.cpp" />
@@ -147,11 +149,12 @@
     <ClCompile Include="src\Core\Assets\TextureAsset.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Core\Factories\EntityFactory.h" />
+    <ClInclude Include="src\Core\Entities\PlayerMeleeAttack.h" />
     <ClInclude Include="src\Core\Interfaces\IAsset.h" />
     <ClInclude Include="src\Core\Managers\AssetManager.h" />
     <ClInclude Include="src\Core\Interfaces\IAssetHandler.h" />
     <ClInclude Include="src\Core\Managers\ScreenManager.h" />
-    <ClInclude Include="src\Core\Manager\ScreenManager.h" />
     <ClInclude Include="src\Core\Screens\GameScreen.h" />
     <ClInclude Include="src\Core\Core_types.h" />
     <ClInclude Include="src\Core\Entities\Entity.h" />
