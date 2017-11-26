@@ -28,9 +28,37 @@ enum ScreenType
 	SCREEN_GAME
 };
 
+/// Enumeration of AssetLoadTime
+enum AssetLoadTime
+{
+	AssetLoadNow = 0, ///< Load the asset now
+	AssetLoadLater = 1  ///< Load the asset later
+};
+
+/// Enumeration of AssetDropTime
+enum AssetDropTime
+{
+	AssetDropUnspecified = 0, ///< Drop/unload time unspecified, use default AtZero
+	AssetDropAtZero = 1, ///< Drop/unload when count reaches 0
+	AssetDropAtExit = 2  ///< Drop/unload when program exits (deconstructor)
+};
+
+/// Enumeration of all Asset loading techniques
+enum AssetLoadStyle
+{
+	AssetLoadFromUnknown = 0, ///< Error condition returned by GetLoadStyle
+	AssetLoadFromFile = 1, ///< Load the asset from a file
+	AssetLoadFromMemory = 2, ///< Load the asset from memory
+	AssetLoadFromNetwork = 3  ///< Load the asset from the network
+};
+
 // Forward declarations
 class Game;
 class AScreen;
 
+
 /// Declare Asset ID typedef which is used for identifying Assets
 typedef std::string typeAssetID;
+
+/// Declare Asset Handler ID typedef which is used for identifying Asset Handler objects
+typedef std::string typeAssetHandlerID;

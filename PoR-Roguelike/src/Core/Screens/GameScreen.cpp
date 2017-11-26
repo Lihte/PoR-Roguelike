@@ -4,10 +4,9 @@
 
 
 GameScreen::GameScreen(Game &game) :
-	AScreen(game, SCREEN_GAME),
-	shape(100.f)
+	AScreen(game, SCREEN_GAME)
 {
-	shape.setFillColor(sf::Color::Green);
+
 }
 
 GameScreen::~GameScreen()
@@ -34,7 +33,7 @@ void GameScreen::UpdateVariable(float elapsedTime)
 
 void GameScreen::Draw(void)
 {
-	m_Game.m_Window.draw(shape);
+
 }
 
 void GameScreen::HandleCleanup(void)

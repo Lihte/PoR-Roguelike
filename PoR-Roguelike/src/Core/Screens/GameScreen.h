@@ -18,6 +18,5 @@ protected:
 	virtual void HandleCleanup(void);
 
 private:
-	sf::CircleShape shape;
 };
 
