@@ -20,6 +20,7 @@ public:
 	Tiles GetDungeon();
 
 private:
+	void GenerateDungeon();
 	Room* GenerateRoom(int posX, int posY);
 
 	int m_RoomCount;

@@ -24,10 +24,17 @@ DungeonGenerator::DungeonGenerator(const int roomCount, TextureHandler* textureH
 DungeonGenerator::~DungeonGenerator(){
 }
 
-DungeonGenerator::Tiles DungeonGenerator::GetDungeon()
-{
+DungeonGenerator::Tiles DungeonGenerator::GetDungeon(){
+	GenerateDungeon();
 	m_Tiles = GenerateRoom(100, 100)->tiles;
 	return m_Tiles;
+}
+
+void DungeonGenerator::GenerateDungeon(){
+	for (int i = 0; i < 1; ++i) {
+		Room* room = GenerateRoom(0, 0);
+		m_Tiles.insert(std::end(m_Tiles), std::begin(room->tiles), std::end(room->tiles));
+	}
 }
 
 DungeonGenerator::Room* DungeonGenerator::GenerateRoom(int posX, int posY){
