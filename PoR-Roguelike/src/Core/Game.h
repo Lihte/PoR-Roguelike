@@ -23,14 +23,13 @@ public:
 	sf::RenderWindow m_Window;
 
 	ScreenManager m_ScreenManager;
-
 	AssetManager m_AssetManager;
 
 protected:
 
 	void GameLoop(void);
 
-	void ProcessInput();
+	void ProcessInput(AScreen& screen);
 
 	void Cleanup(void);
 
@@ -45,4 +44,8 @@ private:
 	int m_ExitCode;
 
 	static Game* gGame;
+
+	sf::Int32 m_UpdateRate;
+
+	uint32_t m_MaxUpdates;
 };

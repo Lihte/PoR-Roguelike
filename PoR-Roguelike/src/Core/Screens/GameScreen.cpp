@@ -1,19 +1,16 @@
 #include "GameScreen.h"
-#include "Core\Game.h"
 #include "Core\Assets\TextureHandler.h"
-
+#include "Core\Factories\EntityFactory.h"
 
 
 GameScreen::GameScreen(Game &game) :
 	AScreen(game, SCREEN_GAME)
 {
-	player = new Player();
-	TextureHandler* textureHandler = static_cast<TextureHandler*
->(game.m_AssetManager.GetHandler("TextureHandler"));
+	TextureHandler* textureHandler = static_cast<TextureHandler*>(m_Game.m_AssetManager.GetHandler("TextureHandler"));
 
-	sf::Texture* texture = textureHandler->GetReference("player_placeholder");
+	EntityFactory factory = EntityFactory(m_Game, *textureHandler);
 
-	player->GetSprite()->setTexture(*texture);
+	player = factory.CreatePlayer();
 }
 
 GameScreen::~GameScreen()
@@ -28,14 +25,15 @@ void GameScreen::HandleEvents(void)
 {
 }
 
-void GameScreen::UpdateFixed(void)
+void GameScreen::UpdateFixed()
 {
 
+	
 }
 
 void GameScreen::UpdateVariable(float elapsedTime)
 {
-
+	player->Update(elapsedTime);
 }
 
 void GameScreen::Draw(void)
