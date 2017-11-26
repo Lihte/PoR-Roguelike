@@ -6,7 +6,7 @@ Entity::Entity(const int health, const std::string textureName)
 }
 
 Entity::~Entity(){
-	delete m_Sprite;
+	delete m_pSprite;
 }
 
 void Entity::Update(const float dt){

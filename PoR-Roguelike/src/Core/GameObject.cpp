@@ -7,7 +7,7 @@ GameObject::GameObject(const std::string textureName){
 }
 
 GameObject::~GameObject(){
-	delete m_Sprite;
+	delete m_pSprite;
 }
 
 void GameObject::Update(const float dt)
@@ -17,5 +17,5 @@ void GameObject::Update(const float dt)
 
 void GameObject::UpdateSpritePosition()
 {
-	m_Sprite->setPosition(m_Position);
+	m_pSprite->setPosition(m_Position);
 }

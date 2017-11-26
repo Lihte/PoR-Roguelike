@@ -1,9 +1,14 @@
 #pragma once
 #include "AScreen.h"
+#include "Core\Entities\Player.h"
+
+class Tile;
 
 class GameScreen : public AScreen
 {
 public:
+	typedef std::vector<Tile*> TileVector;
+
 	GameScreen(Game &game);
 	virtual ~GameScreen();
 
@@ -18,6 +23,8 @@ protected:
 	virtual void HandleCleanup(void);
 
 private:
-	sf::CircleShape shape;
+
+	TileVector m_Tiles;
+	Player* player;
 };
 

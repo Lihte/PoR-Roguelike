@@ -13,17 +13,27 @@
 	Create corridors to connect all rooms
 
 */
-DungeonGenerator::DungeonGenerator(const int roomCount){
+DungeonGenerator::DungeonGenerator(const int roomCount, TextureHandler* textureHandler)
+	: m_pTextureHandler(textureHandler){
 	m_RoomCount = roomCount;
+
+	m_MaxRoomWidth = 10;
+	m_MaxRoomHeight = 10;
 }
 
 DungeonGenerator::~DungeonGenerator(){
 }
 
+DungeonGenerator::Tiles DungeonGenerator::GetDungeon()
+{
+	m_Tiles = GenerateRoom(100, 100)->tiles;
+	return m_Tiles;
+}
+
 DungeonGenerator::Room* DungeonGenerator::GenerateRoom(int posX, int posY){
 	Room* room = new Room;
-	const int roomHeight = std::rand() % m_MaxRoomWidth + 1;
-	const int roomWidth = std::rand() % m_MaxRoomHeight + 1;
+	const int roomHeight = std::rand() % m_MaxRoomWidth + 7;
+	const int roomWidth = std::rand() % m_MaxRoomHeight + 7;
 	room->height = roomHeight;
 	room->width = roomWidth;
 
@@ -31,13 +41,19 @@ DungeonGenerator::Room* DungeonGenerator::GenerateRoom(int posX, int posY){
 
 	for (int i = 0; i < roomHeight; ++i) {
 		for (int j = 0; j < roomWidth; ++j) {
-			if (i == 0 || i == roomHeight - 1
-				|| i == 0 || i == roomWidth - 1)
+			/*if (i == 0 || i == roomHeight - 1
+				|| i == 0 || i == roomWidth - 1) {
 				room->tiles.push_back(new WallTile(pos, "wall"));
-			else
+				room->tiles.back()->GetSprite()->setTexture(*m_pTextureHandler->GetReference("wall_brick_brown0"));
+			}
+			else {*/
 				room->tiles.push_back(new FloorTile(pos, "floor"));
-			pos += room->tiles.back()->Getsize();
+				room->tiles.back()->GetSprite()->setTexture(*m_pTextureHandler->GetReference("floor_cobble_blood1"));
+			//}
+			pos.x += 32;// room->tiles.back()->Getsize();
 		}
+		pos.y += 32;
+		pos.x = posX;
 	}
 
 	return room;

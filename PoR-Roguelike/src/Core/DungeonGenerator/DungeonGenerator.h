@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
 #include "Core/Tiles/Tile.h"
+#include "Core/Assets/TextureHandler.h"
 #include <vector>
 
 class DungeonGenerator {
@@ -13,8 +14,10 @@ public:
 		int width;
 	};
 
-	DungeonGenerator(const int roomCount);
+	DungeonGenerator(const int roomCount, TextureHandler* textureHandler);
 	~DungeonGenerator();
+
+	Tiles GetDungeon();
 
 private:
 	Room* GenerateRoom(int posX, int posY);
@@ -23,4 +26,5 @@ private:
 	int m_MaxRoomHeight;
 	int m_MaxRoomWidth;
 	Tiles m_Tiles;
+	TextureHandler* m_pTextureHandler;
 };

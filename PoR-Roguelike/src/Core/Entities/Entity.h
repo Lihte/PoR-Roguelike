@@ -6,7 +6,7 @@
 
 #include "Core/GameObject.h"
 
-class Entity : GameObject {
+class Entity : public GameObject {
 public:
 	Entity(const int health, const std::string textureName);
 	virtual ~Entity();

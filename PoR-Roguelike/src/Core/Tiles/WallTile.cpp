@@ -2,6 +2,7 @@
 
 WallTile::WallTile(const sf::Vector2f pos, const std::string textureName)
 	: Tile(pos, TileType::Wall, textureName) {
+	m_pSprite = new sf::Sprite();
 }
 
 WallTile::~WallTile(){

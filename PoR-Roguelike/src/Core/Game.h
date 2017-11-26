@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
-#include "Handlers\ScreenManager.h"
+#include "Managers\ScreenManager.h"
+#include "Managers\AssetManager.h"
 
 class Game {
 
@@ -22,6 +23,8 @@ public:
 	sf::RenderWindow m_Window;
 
 	ScreenManager m_ScreenManager;
+
+	AssetManager m_AssetManager;
 
 protected:
 
