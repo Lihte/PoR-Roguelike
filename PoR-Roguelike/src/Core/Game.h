@@ -22,8 +22,9 @@ public:
 
 	sf::RenderWindow m_Window;
 
-	ScreenManager m_ScreenManager;
-	AssetManager m_AssetManager;
+	ScreenManager& GetScreenManager() const { return *m_ScreenManager; }
+	AssetManager& GetAssetManager() const { return *m_AssetManager; }
+	
 
 protected:
 
@@ -48,4 +49,7 @@ private:
 	sf::Int32 m_UpdateRate;
 
 	uint32_t m_MaxUpdates;
+
+	ScreenManager* m_ScreenManager;
+	AssetManager* m_AssetManager;
 };

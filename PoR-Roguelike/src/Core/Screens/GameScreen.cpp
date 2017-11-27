@@ -6,11 +6,9 @@
 GameScreen::GameScreen(Game &game) :
 	AScreen(game, SCREEN_GAME)
 {
-	TextureHandler* textureHandler = static_cast<TextureHandler*>(m_Game.m_AssetManager.GetHandler("TextureHandler"));
+	EntityFactory factory = EntityFactory(*m_Game.GetAssetManager().GetTextureHandler());
 
-	EntityFactory factory = EntityFactory(m_Game, *textureHandler);
-
-	player = factory.CreatePlayer();
+	entityPool.push_back(factory.CreatePlayer("player"));
 }
 
 GameScreen::~GameScreen()
@@ -33,12 +31,18 @@ void GameScreen::UpdateFixed()
 
 void GameScreen::UpdateVariable(float elapsedTime)
 {
-	player->Update(elapsedTime);
+	for (int i = 0; i < entityPool.size(); i++)
+	{
+		entityPool[i]->Update(elapsedTime);
+	}
 }
 
 void GameScreen::Draw(void)
 {
-	m_Game.m_Window.draw(*player->GetSprite());
+	for (int i = 0; i < entityPool.size(); i++)
+	{
+		m_Game.m_Window.draw(entityPool[i]->GetSprite());
+	}
 }
 
 void GameScreen::HandleCleanup(void)

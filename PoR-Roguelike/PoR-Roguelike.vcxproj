@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\Entities\Projectile.cpp" />
     <ClCompile Include="src\Core\Factories\EntityFactory.cpp" />
     <ClCompile Include="src\Core\Entities\PlayerMeleeAttack.cpp" />
     <ClCompile Include="src\Core\Interfaces\IAsset.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="src\Core\Assets\TextureAsset.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Core\Entities\Projectile.h" />
     <ClInclude Include="src\Core\Factories\EntityFactory.h" />
     <ClInclude Include="src\Core\Entities\PlayerMeleeAttack.h" />
     <ClInclude Include="src\Core\Interfaces\IAsset.h" />

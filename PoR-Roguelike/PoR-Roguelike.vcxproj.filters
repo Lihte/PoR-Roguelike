@@ -99,11 +99,14 @@
     <ClCompile Include="src\Core\Assets\TextureAsset.cpp">
       <Filter>Source Files\Core\Assets</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Entities\PlayerMeleeAttack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Core\Factories\EntityFactory.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Core\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Entities\PlayerMeleeAttack.cpp">
+      <Filter>Source Files\Core\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Entities\Projectile.cpp">
+      <Filter>Source Files\Core\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +153,10 @@
       <Filter>Header Files\Core\Entities</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\Factories\EntityFactory.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Core\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Entities\Projectile.h">
+      <Filter>Header Files\Core\Entities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

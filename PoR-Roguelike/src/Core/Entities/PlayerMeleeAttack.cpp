@@ -4,7 +4,7 @@
 
 
 PlayerMeleeAttack::PlayerMeleeAttack() :
-	Entity(-1, "")
+	Entity("")
 {
 }
 

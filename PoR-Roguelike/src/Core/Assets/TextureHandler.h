@@ -7,7 +7,7 @@
 class TextureHandler : public IAssetHandler
 {
 public:
-	TextureHandler(const typeAssetHandlerID theAssetHandlerID);
+	TextureHandler(const typeAssetHandlerID theAssetHandlerID = "TextureHandler");
 	~TextureHandler();
 
 	virtual sf::Texture* GetReference(const typeAssetID theAssetID, AssetLoadTime loadTime = AssetLoadLater, AssetLoadStyle loadStyle = AssetLoadFromFile, AssetDropTime dropTime = AssetDropAtZero);

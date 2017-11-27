@@ -1,10 +1,12 @@
-#include "Game.h"
-#include "Screens\GameScreen.h"
 #include "Screens\AScreen.h"
+#include "Screens\GameScreen.h"
+#include "Screens\SplashScreen.h"
 #include "Core/Assets/TextureHandler.h"
+#include "Game.h"
 
 
-Game* Game::gGame = NULL;
+
+Game* Game::gGame = nullptr;
 
 Game::Game(const std::string title) : 
 	m_Title(title),
@@ -23,7 +25,7 @@ int Game::Run(void)
 {
 	m_IsRunning = true;
 
-	m_AssetManager.RegisterHandler(new TextureHandler("TextureHandler"));
+	GetAssetManager().RegisterHandler(new (std::nothrow) TextureHandler());
 
 	InitRenderer();
 	InitScreenFactory();
@@ -50,7 +52,7 @@ void Game::GameLoop(void)
 
 	while (IsRunning() && m_Window.isOpen())
 	{
-		AScreen& screen = m_ScreenManager.GetActiveScreen();
+		AScreen& screen = GetScreenManager().GetActiveScreen();
 
 		uint32_t updates = 0;
 
@@ -79,7 +81,8 @@ bool Game::IsRunning(void) const
 
 void Game::InitScreenFactory(void)
 {
-	m_ScreenManager.AddActiveScreen(new(std::nothrow) GameScreen(*this));
+	GetScreenManager().AddActiveScreen(new (std::nothrow) SplashScreen(*this));
+	GetScreenManager().AddInactiveScreen(new (std::nothrow) GameScreen(*this));
 }
 
 void Game::InitRenderer(void)

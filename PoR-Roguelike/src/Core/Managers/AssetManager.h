@@ -3,6 +3,7 @@
 #include "Core\Core_types.h"
 
 class IAssetHandler;
+class TextureHandler;
 
 #pragma once
 class AssetManager
@@ -12,8 +13,11 @@ public:
 	~AssetManager();
 
 	void RegisterHandler(IAssetHandler* handler);
-	IAssetHandler* GetHandler(typeAssetID assetID);
 
+	TextureHandler* GetTextureHandler();
+
+protected:
+	IAssetHandler* GetHandler(typeAssetHandlerID handlerID);
 
 private:
 	std::unordered_map<typeAssetHandlerID, IAssetHandler*> m_handlerMap;

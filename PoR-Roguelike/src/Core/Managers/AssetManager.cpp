@@ -1,8 +1,10 @@
 #include <assert.h>
 #include <iostream>
 
-#include "AssetManager.h"
 #include "Core/Interfaces/IAssetHandler.h"
+#include "Core/Assets/TextureHandler.h"
+#include "AssetManager.h"
+
 
 
 
@@ -17,9 +19,16 @@ AssetManager::~AssetManager()
 
 void AssetManager::RegisterHandler(IAssetHandler* handler)
 {
-	assert(handler != NULL && "AssetManager::RegisterHandler() received a bad pointer");
+	assert(handler != nullptr && "AssetManager::RegisterHandler() received a bad pointer");
 
-	m_handlerMap[handler->GetID()] = handler;
+	m_handlerMap[handler->GetID()];
+}
+
+TextureHandler* AssetManager::GetTextureHandler()
+{
+	auto handler = GetHandler("TextureHandler");
+
+	return static_cast<TextureHandler*>(handler);
 }
 
 IAssetHandler* AssetManager::GetHandler(const typeAssetHandlerID handlerID)

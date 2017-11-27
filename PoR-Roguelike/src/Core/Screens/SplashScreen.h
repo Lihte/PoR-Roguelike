@@ -2,26 +2,11 @@
 
 #include "AScreen.h"
 
-class SplashScreen : AScreen
+class SplashScreen : public AScreen
 {
-	///The Asset ID to assign to the splash image
-	typeAssetID	_mSplashID;
-	/// The filename of the splash image to load
-	//std::string _mSplashFilename;
-	/// Splash ImageAsset to load
-	//ImageAsset _mSplashImage;
-	/// The sprite to hold the splash image being displayed
-	//sf::Sprite _mSplashSprite;
-	/// The time in seconds to wait before continuing to next game Screen
-	float _mSplashDelay;
-
-protected:
-
-	void HandleCleanup(void);
-
 public:
 
-	SplashScreen(const typeAssetID splashID, Game& game, float splashDelay);
+	SplashScreen(Game& game, const typeAssetID splashID = "SplashScreen", float splashDelay = 10.0F);
 
 	~SplashScreen();
 
@@ -29,9 +14,23 @@ public:
 
 	virtual void ReInit(void);
 
+	virtual void HandleEvents(void);
+
 	virtual void UpdateFixed(void);
 
 	virtual void UpdateVariable(float elapsedTime);
 
 	virtual void Draw(void);
+	
+
+protected:
+	void HandleCleanup(void);
+
+private:
+	///The Asset ID to assign to the splash image
+	typeAssetID	m_SplashID;
+	/// The sprite to hold the splash image being displayed
+	sf::Sprite m_SplashSprite;
+	/// The time in seconds to wait before continuing to next game Screen
+	float _mSplashDelay;
 };

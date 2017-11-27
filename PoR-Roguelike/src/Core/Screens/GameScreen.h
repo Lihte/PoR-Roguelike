@@ -19,7 +19,6 @@ protected:
 	virtual void HandleCleanup(void);
 
 private:
-
-	Player* player;
+	std::vector<Entity*> entityPool;
 };
 
